@@ -1,6 +1,6 @@
 class SupplementsController < ApplicationController
   def index
-    @supplements = Supplement.all
+    @supplements = Supplement.order(name: :asc)
   end
 
   def show
