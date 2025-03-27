@@ -65,3 +65,4 @@ end
 # Custom Added
 gem 'devise'
 gem 'ostruct'
+gem 'pundit'
