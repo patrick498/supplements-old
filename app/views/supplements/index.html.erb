@@ -1,4 +1,6 @@
 <h1>Supplements</h1>
-<% @supplements.each do |supplement| %>
-  <p><%= link_to supplement.name, supplement_path(supplement) %></p>
+<% if @supplements.present? %>
+  <% @supplements.each do |supplement| %>
+    <p><%= link_to supplement.name, supplement_path(supplement) %></p>
+  <% end %>
 <% end %>

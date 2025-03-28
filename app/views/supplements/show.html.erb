@@ -1,2 +1,5 @@
-<h1><%= @supplement.name %></h1>
-<p><%= @supplement.with_food_instruction %></p>
+<% if @supplement.present? %>
+  <h1><%= @supplement.name %></h1>
+  <p class='fs-1'><%= @supplement.with_food_instruction %></p>
+<% end %>
+<%= link_to 'Back to list', supplements_path %>
