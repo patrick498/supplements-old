@@ -1,6 +1,8 @@
-<h1>Supplements</h1>
-<% if @supplements.present? %>
-  <% @supplements.each do |supplement| %>
-    <p><%= link_to supplement.name, supplement_path(supplement) %></p>
+<div class='container'>
+  <h1>Supplements</h1>
+  <% if @supplements.present? %>
+    <% @supplements.each do |supplement| %>
+      <p><%= link_to supplement.name, supplement_path(supplement), class: 'btn fs-5' %></p>
+    <% end %>
   <% end %>
-<% end %>
+</div>
