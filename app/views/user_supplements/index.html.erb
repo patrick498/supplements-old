@@ -1,3 +1,8 @@
 <div class='container'>
   <h1>Your supplements</h1>
+  <% if @user_supplements.present? %>
+    <% @user_supplements.each do |user_supplement| %>
+      <p><%= user_supplement.supplement.name %></p>
+    <% end %>
+  <% end %>
 </div>

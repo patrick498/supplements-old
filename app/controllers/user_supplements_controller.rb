@@ -1,12 +1,12 @@
 class UserSupplementsController < ApplicationController
   include Pundit
-
   # Rescue from unauthorized access
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
+  before_action :authenticate_user!
+
   def index
     @user_supplements = policy_scope(UserSupplement)
-
   end
 
   private

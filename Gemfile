@@ -66,3 +66,4 @@ end
 gem 'devise'
 gem 'ostruct'
 gem 'pundit'
+gem 'sassc-rails'
